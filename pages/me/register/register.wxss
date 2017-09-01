@@ -1,0 +1,29 @@
+.register_form {
+  
+}
+.form_content {
+  position: relative;
+}
+.register_form input {
+  background: #fff;
+  height: 30px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.identify_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  z-index: 99;
+  background: #3D4E56;
+  color: #fff;
+}
+.form_submit {
+  margin: 40px 10px;
+}
+.form_submit button {
+  color: #fff;
+  background: #3D4E56;
+  /*border-radius: 25px;*/
+}

@@ -1,0 +1,88 @@
+<!--pages/me/me.wxml-->
+
+
+<view class="userLogin container">
+  <!--登录界面-->
+  <view class="info" wx:if="{{isLogin}}">
+    <view class="info_head">
+      <view class="head_wrap">
+        <view class="avatar" style="background-image: url({{avatar}})"></view>
+        <view class="main">
+          <navigator url="/pages/me/setting/setting">
+            <text class="setting fa fa-cog"></text>
+          </navigator>
+          <view class="name">
+            {{user.user}}
+          </view>
+          <view class="tel">
+            <text class="fa fa-mobile"></text> {{user.tel}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="info_content">
+      <view class="my_points">
+        <view class="coupon">
+          <view class="value">{{user.coupon}}<text class="unit">张</text></view>
+          <view class="title">代金券</view>
+        </view>
+        <view class="mall">
+          <view class="value">{{user.points}}<text class="unit">分</text></view>
+          <view class="title">商城积分</view>
+        </view>
+        <view class="design">
+          <view class="value">{{user.dpoints}}<text class="unit">分</text></view>
+          <view class="title">设计积分</view>
+        </view>
+      </view>
+      <view class="line_group">
+        <view wx:if="{{showCode}}" bindtap="showMyCode" class="line">
+          <view class="icon-left">
+            <text class="fa fa-qrcode"></text>
+          </view>
+          <view class="content">
+            我的二维码
+            <text class="icon-right fa fa-angle-right"></text>
+          </view>
+        </view>
+        <navigator class="line my_client" url="/pages/me/myClient/myClient">
+          <view class="icon-left">
+            <text class="fa fa-address-book-o"></text>
+          </view>
+          <view class="content">
+            我的客户
+            <text class="icon-right fa fa-angle-right"></text>
+          </view>
+        </navigator>
+        <navigator class="line my_collect" url="/pages/me/myCollect/myCollet">
+          <view class="icon-left">
+            <text class="fa fa-star-o"></text>
+          </view>
+          <view class="content">
+            我的收藏
+            <text class="icon-right fa fa-angle-right"></text>
+          </view>
+        </navigator>
+      </view>
+      <view class="line logout" bindtap="logout">
+        退出登录
+      </view>
+    </view>
+  </view>
+
+  <!--未登录界面-->
+  <view class="login" wx:else>
+    <navigator class="login_head" url="/pages/me/register/register">
+      <view class="login_left">
+        <view class="login_register">
+          <text>登录/注册</text>
+        </view>
+      </view>
+      <view class="login_right">
+        <text class="fa fa-angle-right"></text>
+      </view>
+    </navigator>
+    <view class="login_body"></view>
+  </view>
+
+</view>

@@ -1,0 +1,46 @@
+<scroll-view 
+  class="container" 
+  scroll-top="{{scrollTop}}"
+  scroll-y="true" 
+  bindscroll="scroll"
+  enable-back-to-top="true"
+  bindscrolltolower="scrollBottomLoad"
+  >
+<!--<view class="container">-->
+  <view class="home_top">
+    <navigator url="/pages/index/search/search">
+      <view class="search">
+        <text class="search_text"><text class="icon fa fa-search"></text>搜索</text>
+      </view>
+    </navigator>
+  </view>
+  <view class="home_nav">
+    <view class="nav_item"></view>
+    <view class="nav_item"></view>
+    <view class="nav_item"></view>
+    <navigator class="nav_item" url="/pages/index/classify/classify">
+      <text class="icon fa fa-th-large"></text>
+      <text class="title">分类</text>
+    </navigator>
+  </view>
+  <view class="hot_title">
+    <text class="hot_title_text">最新推荐产品</text>
+  </view>
+  <view class="hot_list">
+    <view class="hot_list_item" wx:for="{{products}}" wx:key="{{item.ID}}" bindtap="showItem" data-id="{{item.ID}}">
+      <view class="item_image">
+        <image src="{{item.urlimg}}" bindload="imageReady"></image>
+      </view>
+      <view class="item_info">
+        <view class="name"><text style="font-weight: 700;">{{item.name}} | </text>{{item.submodel}}</view>
+        <view class="price">
+          ¥{{item.price}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="toTop" hidden="{{toTop}}" bindtap="toTop">
+    <text class="arrow fa fa-angle-double-up"></text>
+  </view>
+<!--</view>-->
+</scroll-view>

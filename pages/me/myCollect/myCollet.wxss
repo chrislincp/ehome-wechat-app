@@ -1,0 +1,48 @@
+/* pages/me/myCollect/myCollet.wxss */
+.collect_list {
+  
+}
+.collect_item {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background: #fff;
+  border-bottom: 0.5px solid #ccc;
+}
+.collect_image {
+  flex: 0 0 80px;
+  height: 80px;
+  padding: 10px;
+}
+.collect_image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.collect_info {
+  flex: 1;
+  height: 100%;
+}
+.info_item {
+  width: calc(100% - 20px);
+  height: 80px;
+  padding: 10px;
+  font-size: 18px;
+  color: #3D4E56;
+}
+.info_item .info_name {
+  height: 50px;
+}
+.info_name text {
+  font-size: 16px;
+}
+.info_item .info_price {
+  height: 30px;
+}
+.info_price text {
+  line-height: 30px;
+  
+}
+.info_price .icon {
+  margin-right: 5px;
+}

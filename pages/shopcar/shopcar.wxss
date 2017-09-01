@@ -1,0 +1,211 @@
+/* pages/shopcar/shopcar.wxss */
+
+page {
+  height: 100%;
+}
+.shopcarList {
+  height: calc(100% - 46px);
+}
+/* .shopcar_wrap {
+  width: calc(100% + 60px);
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+} */
+.shopcar_item {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background: #fff;
+  margin-bottom: 10px;
+   /* position: absolute;
+  transition: left 0.3s; 
+   border-bottom: 0.5px solid #ccc;  */
+}
+/* .shopcar_delete {
+  width: 60px;
+  height: 100px;
+  background: red;
+  float: right;
+} */
+.shopcar_item:last-child {
+  margin-bottom: 0;
+}
+.item_select {
+  flex: 0 0 34px;
+  position: relative;
+}
+.item_select .select_icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 42px auto;
+}
+.select_icon .no_select {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #3D4E56;
+}
+.item_select icon {
+  position: absolute;
+  left: 9px;
+  top: 42px;
+}
+.shopcar_image {
+  flex: 0 0 80px;
+  height: 80px;
+  padding: 10px;
+}
+.shopcar_image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.shopcar_info {
+  flex: 1;
+  height: 100%;
+}
+.info_item {
+  width: calc(100% - 20px);
+  height: 80px;
+  padding: 10px;
+  font-size: 18px;
+  color: #3D4E56;
+}
+.info_item .info_top {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+.info_top .info_name {
+  font-size: 16px;
+  flex: 1;
+}
+.info_top .trash {
+  flex: 0 0 40px;
+  font-size: 16px;
+  text-align: right;
+}
+
+.info_bottom {
+  height: 32px;
+  overflow: hidden;
+  position: relative;
+}
+.num_select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  height: 30px;
+}
+.num_title {
+  display: block;
+  float: left;
+  line-height: 32px;
+}
+.num_btn {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 100%;
+  line-height: 30px;
+  text-align: center;
+  background: #fff;
+}
+.num_btn_disabled {
+  color: #b1b8ba;
+}
+.num_input {
+  width: 40px;
+  height: 100%;
+  display: block;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.info_item .info_price {
+  height: 32px;
+}
+.info_price text {
+  line-height: 32px;
+  
+}
+.info_price .icon {
+  margin-right: 5px;
+}
+
+.checkout {
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background: #fff;
+  border-top: 0.5px solid #ccc;
+}
+.check_left {
+  flex: 1;
+  padding: 5px;
+  font-size: 16px;
+  text-align: right;
+  line-height: 35px;
+  display: flex;
+}
+.check_left .left_all {
+  flex: 0 0 40px;
+  position: relative;
+}
+.left_all .selectall_icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: 12px;
+}
+.selectall_icon .no_selectall {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #3D4E56;
+}
+.selectall_icon icon {
+  position: absolute;
+  top: -1px;
+  left: 0;
+}
+.left_all text {
+  font-size: 12px;
+  color: #3D4E56;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+}
+.check_left .left_price {
+  flex: 1;
+}
+.left_price .icon {
+  margin-right: 5px;
+  color: #3D4E56;
+}
+.left_price .total {
+  color: #3D4E56;
+}
+.check_right {
+  flex: 0 0 100px;
+  background: red;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+}
+.goToCheckout {
+  background: #b1b8ba !important;
+}

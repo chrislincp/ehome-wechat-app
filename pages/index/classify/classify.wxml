@@ -1,0 +1,32 @@
+<!--pages/index/classify/classify.wxml-->
+<view class="classify_container">
+  <view class="search_wrap">
+    <navigator url="/pages/index/search/search">
+      <view class="search">
+        <text class="search_text">
+          <text class="icon fa fa-search"></text>
+          <text class="title">搜索</text>
+        </text>
+      </view>
+    </navigator>  
+  </view>
+  <view class="classify_body">
+    <scroll-view scroll-y="true" class="classify_left">
+      <view 
+        data-id="{{item.id}}"
+        bindtap="selected" 
+        class="{{isSelect == item.id ? 'active classify_name' : 'classify_name'}}" 
+        wx:for="{{classify}}"
+        wx:key="{{item.id}}"
+        >
+        {{item.title}}
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y="true" class="classify_right">
+      <view class="classname" wx:for="{{classify[isSelect].list}}" wx:key="index">
+        {{item.title}}
+      </view>
+    </scroll-view>
+  </view>
+  
+</view>

@@ -1,0 +1,62 @@
+<scroll-view wx:if="{{isLogin}}" class="shopcarList" scroll-y>
+  <view class="shopcar_item" wx:for="{{shopcarList}}" wx:key="{{item.ID}}" scroll-y="true">
+    <view class="item_select" data-id="{{item.ID}}" bindtap="selectShop">
+      <view class="select_icon">
+        <view hidden="{{item.select}}" class="no_select"></view>
+        <icon type="success" hidden="{{!item.select}}" size="16" color="red" />
+      </view>
+    </view>
+    <navigator class="shopcar_image" url="/pages/index/detail/detail?id={{item.FID}}">
+      <image src="{{item.urlimg}}"></image>
+    </navigator>
+    <view class="shopcar_info">
+      <view class="info_item">
+        <view class="info_top">
+          <navigator url="/pages/index/detail/detail?id={{item.FID}}" class="info_name">
+            <text>{{item.brand}}{{item.name}}{{item.submodel}}</text>
+          </navigator>
+          <view class="trash" data-id="{{item.ID}}" bindtap="deleteItem">
+            <text class="fa fa-trash-o"></text>
+          </view>
+        </view>
+        <view class="info_bottom">
+          <view class="info_price">
+            <text class="icon fa fa-jpy"></text>
+            <text>{{item.totalPrice}}</text>
+          </view>
+          <view class="num_select">
+            <text data-id="{{item.ID}}" bindtap="{{item.num == 1 ? '' : 'decrease'}}" class="{{item.num == 1 ? 'num_btn fa fa-minus num_btn_disabled' : 'num_btn fa fa-minus'}}">
+              </text>
+            <!-- <input 
+            class="num_input" 
+            value="{{item.num}}" 
+            type="number" 
+            maxlength="3" 
+            bindblur="checkNum" 
+            bindinput="numInput" 
+            /> -->
+            <view class="num_input">{{item.num}}</view>
+            <text data-id="{{item.ID}}" bindtap="increase" class="num_btn fa fa-plus"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="checkout">
+  <view class="check_left">
+    <view class="left_all" bindtap="selectAll">
+      <view class="selectall_icon">
+        <view hidden="{{selectAll}}" class="no_selectall"></view>
+        <icon type="success" hidden="{{!selectAll}}" size="16" color="red" />
+      </view>
+      <text>全选</text>
+    </view>
+    <view class="left_price">
+      总计：<text class="icon fa fa-jpy"></text><text class="total">{{total}}</text>
+    </view>
+  </view>
+  <view class="{{total != 0 ? 'check_right' : 'check_right goToCheckout'}}" bindtap="{{total != 0 ? 'goTocheckout' : ''}}">
+    去结算
+  </view>
+</view>

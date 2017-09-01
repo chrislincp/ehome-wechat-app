@@ -1,0 +1,208 @@
+page {
+  height: 100%;
+}
+.container {
+  height: 100%;
+}  
+.swiper {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+.swiper_wrap {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.img_item {
+  width: 100%;
+}
+.top_title {
+  background-color: #fff;
+  padding: 10px;
+  position: relative;
+}
+.top_title .share {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #3D4E56;
+   border: 0;
+  margin: 0;
+  padding: 0; 
+  background-image: url('https://www.ehometd.com/api/wechat/sprites.jpg');
+  background-repeat: no-repeat;
+  background-position: -40px -40px;
+  transform: scale(0.5);
+}
+.top_title .price {
+  color: #3D4E56;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.top_title .name {
+  font-size: 14px;
+}
+.price .icon {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.detail_body {
+  margin-top: 10px;
+  background: #fff;
+}
+.detail_body .mainInfo {
+
+}
+.mainInfo .selectBtns {
+  padding: 10px;
+}
+.selectBtns .selectBtn {
+  background: #f6f6f6;
+  color: #3D4E56;
+  display: inline-block;
+  text-align: center;
+  width: 16%;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  margin: 0 5% 5px 0;
+  border-radius: 3px;
+}
+.selectBtn:nth-child(5n) {
+  margin-right: 0;
+}
+.selectBtns .active {
+  background: #3D4E56;
+  color: #fff;
+}
+.mainInfo .selectInfo {
+  padding: 0 10px;
+}
+.selectInfo .info_item {
+  font-size: 14px;
+  color: #3D4E56;
+  padding-bottom: 10px;
+}
+.info_item .title {
+  color: #b1b8ba;
+}
+
+.num_select {
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  height: 30px;
+}
+.num_title {
+  display: block;
+  float: left;
+  line-height: 32px;
+}
+.num_btn {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 100%;
+  line-height: 30px;
+  text-align: center;
+  background: #fff;
+}
+.num_btn_disabled {
+  color: #b1b8ba;
+}
+.num_input {
+  width: 40px;
+  height: 100%;
+  display: block;
+  float: left;
+  text-align: center;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.detail_bottom {
+  width: 100%;
+  height: 46px;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+.detail_bottom .icon_group {
+  flex: 0 0 93px;
+  height: 100%;
+}
+.icon_group .shopcar,
+.icon_group .collect {
+  width: 46px;
+  height: 100%;
+  border-right: 0.5px solid #ccc;
+  float: left;
+  text-align: center;
+}
+.icon_group .collect {
+  border-right: 0;
+}
+.shopcar .shopcar_icon,
+.collect .star,
+.collect .star-o {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 3px;
+  background-image: url('https://www.ehometd.com/api/wechat/sprites.jpg');
+  background-repeat: no-repeat;
+  transform: scale(0.5);
+}
+.shopcar_icon {
+  background-position: 0 -40px;
+}
+.star {
+  background-position: -40px 0;
+}
+.star-o {
+  background-position: 0 0;
+}
+.shopcar_num {
+  width: 16px;
+  height: 16px;
+  background: #ff7070;
+   border-radius: 8px; 
+  position: absolute;
+  top: 6px;
+  left: 26px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+}
+.detail_bottom .btn_group {
+  flex: 1;
+  height: 100%;
+}
+.btn_group .into_shopcar,
+.btn_group .settlement {
+  width: 50%;
+  height: 100%;
+  background: #b1b8ba;
+  display: inline-block;
+  text-align: center;
+}
+.btn_group .settlement{
+  background: #3D4E56;
+}
+.into_shopcar text,
+.settlement text {
+  line-height: 46px;
+  font-size: 18px;
+  color: #fff;
+}

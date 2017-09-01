@@ -1,0 +1,73 @@
+/* pages/me/setting/setting.wxss */
+.settingBody {
+  /*position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;*/
+}
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #3D4E56;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.content {
+  margin-top: 20px;
+  background-color: #fff;
+}
+.content .user {
+  display: flex;
+}
+.user .user-title {
+  flex: 0 0 80px;
+  text-indent: 10px;
+}
+.user-title .title {
+  display: block;
+  margin-top: 10px;
+}
+.user .user-info {
+  flex: 1;  
+}
+.user-info .name-input {
+  padding: 10px 0;
+  border-bottom: 0.5px solid #ccc;
+}
+.sex {
+
+}
+.male, .female {
+  display: inline-block;
+  margin-right: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.sex-text {
+  margin-left: 10px;
+}
+
+.info-submit {
+  margin-top: 50px;
+  margin: 40px 10px;
+}
+.info-submit button {
+  color: #fff;
+  background: #3D4E56;
+}

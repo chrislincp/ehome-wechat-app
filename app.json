@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/search/search",
+    "pages/index/classify/classify",
+    "pages/index/detail/detail",
+    "pages/shopcar/shopcar",
+    "pages/me/me",
+    "pages/me/register/register",
+    "pages/me/myCode/myCode",
+    "pages/me/myClient/myClient",
+    "pages/me/myCollect/myCollet",
+    "pages/me/setting/setting"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3D4E56",
+    "navigationBarTitleText": "理享家",
+    "navigationBarTextStyle":"light",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#3D4E56"
+  },
+  "tabBar": {
+    "color": "#b1b8ba",
+    "selectedColor": "#3D4E56",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/icons/home.jpg",
+        "selectedIconPath": "pages/icons/home_s.jpg"
+      },
+      {
+        "pagePath": "pages/shopcar/shopcar",
+        "text": "购物车",
+        "iconPath": "pages/icons/shopcar.jpg",
+        "selectedIconPath": "pages/icons/shopcar_s.jpg"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "pages/icons/user.jpg",
+        "selectedIconPath": "pages/icons/user_s.jpg"
+      }
+    ]
+  }
+}

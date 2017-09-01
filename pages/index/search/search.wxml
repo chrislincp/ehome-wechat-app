@@ -1,0 +1,64 @@
+<scroll-view 
+  class="search_container"
+  scroll-top="{{scrollTop}}"
+  scroll-y="true" 
+  bindscroll="scroll"
+  enable-back-to-top="true"
+  bindscrolltolower="scrollBottomLoad"
+  >
+  <view class="search_wrap">
+    <view class="{{searched ? 'search_input_res' : 'search_input'}}">
+      <text class="icon fa fa-search"></text>
+      <input 
+        class="search" 
+        bindinput="searchValue" 
+        bindconfirm="search"
+        placeholder="搜索" 
+        placeholder-class="input-placeholder" 
+        focus="{{searched ? false : true}}" 
+        confirm-type="搜索" 
+        value="{{search}}"
+        />
+    </view>
+    <view class="search_button">
+      <button 
+        hidden="{{searched}}" 
+        size="mini" 
+        class="{{isSearch ? 'search' : 'cancel'}}" 
+        bindtap="{{isSearch ? 'search' : 'back'}}"
+        >
+        {{searchButton}}
+      </button>
+    </view>
+  </view>
+  <view class="search_body" wx:if="{{searched}}">
+    <view class="{{filterFixed ? 'filter_fixed' : 'filter'}}">
+      <view 
+        class="{{item.ftype == filterSelect ? 'filter_item filter_active' : 'filter_item'}}" 
+        wx:for="{{filter}}" 
+        wx:key="{{index}}" 
+        data-filter="{{item.ftype}}"
+        bindtap="filterChange"
+        >
+        {{item.name}}
+        <text class="fa fa-sort" wx:if="{{item.ftype == 'price'}}"></text>
+      </view>
+    </view>
+    <view class="{{filterFixed ? 'search_result_fixed' : 'search_result'}}">
+      <view class="result_item" wx:for="{{searchResult}}" wx:key="{{item.ID}}" bindtap="showItem" data-id="{{item.ID}}">
+        <view class="item_image">
+          <image src="{{item.urlimg}}" bindload="imageReady"></image>
+        </view>
+        <view class="item_info">
+          <view class="name"><text style="font-weight: 700;">{{item.name}} | </text>{{item.submodel}}</view>
+          <view class="price">
+            ¥{{item.price}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="toTop" hidden="{{toTop}}" bindtap="toTop">
+    <text class="arrow fa fa-angle-double-up"></text>
+  </view>
+</scroll-view>

@@ -1,0 +1,12 @@
+<view class="container">
+  <form  bindsubmit="submit" class="register_form">
+    <view class="form_content">
+      <input focus="{{telFocus}}" bindinput="telValue" class="form_tel" type="number" placeholder="手机号" maxlength="11"/>
+      <button bindtap="sendIdentifyCode" class="identify_btn" size="mini" disabled="{{disabled}}">{{identify}}</button>
+      <input bindinput="identifyValue" class="form_identify" type="number" placeholder="验证码" />
+    </view>
+    <view class="form_submit">
+    <button disabled="{{submitDisabled}}" formType="submit">登录</button>
+    </view>
+  </form>
+</view>

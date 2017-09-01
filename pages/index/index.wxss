@@ -1,0 +1,133 @@
+/**index.wxss**/
+page {
+  height: 100%;
+  background: #3D4E56;
+}
+.container {
+  height: 100%;
+  background: #f1f1f1;
+}
+.home_top {
+  height: 100px;
+  background: #3D4E56;
+}
+.search {
+  width: 90%;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  background: #fff;
+  border-radius: 20px;
+}
+.search_text {
+  color: #b1b8ba;
+  font-size: 14px;
+  line-height: 40px;
+  text-indent: 20px;
+}
+.search_text .icon {
+  margin-right: 5px;
+}
+.home_nav {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+}
+.nav_item {
+  display: inline-block;
+  width: 25%;
+  height: 80px;
+  position: relative;
+  color: #3D4E56;
+}
+.nav_item .icon {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -15px 0 0 -14px;
+}
+.nav_item .title {
+  position: absolute;
+  font-size: 12px;
+  top: 50%;
+  left: 50%;
+  margin:15px 0 0 -12px;
+}
+.hot_title {
+  width: 100%;
+  height: 36px;
+  text-align: center;
+}
+.hot_title .hot_title_text {
+  color: #3D4E56;
+  font-size: 14px;
+  line-height: 36px;
+}
+
+.hot_list {
+  width: 100%;
+  height: 100%;
+  /*padding: 0 10px;*/
+}
+.hot_list .hot_list_item {
+  display: inline-block;
+  width: calc(50% - 15px);
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.hot_list_item:nth-child(odd) {
+  margin: 0 10px;
+}
+.hot_list_item .item_image {
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  /*border-bottom: 0.5px solid #b1b8ba;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.item_image image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.hot_list_item .item_info {
+  height: 50px;
+  padding: 5px;
+}
+.item_info .name {
+  height: 25px;
+  font-size: 14px;
+  line-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #b1b8ba;
+}
+.item_info .price {
+  height: 25px;
+  font-size: 18px;
+  line-height: 25px;
+  color: #3D4E56;
+}
+
+.toTop {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 50%;
+}
+.toTop text {
+  color: #fff;
+  font-size: 20px;
+  line-height: 40px;
+}

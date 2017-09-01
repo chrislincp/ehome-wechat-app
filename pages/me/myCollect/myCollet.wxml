@@ -1,0 +1,21 @@
+<!--pages/me/myCollect/myCollet.wxml-->
+<view class="collect_list">
+  <navigator wx:for="{{collectList}}" wx:key="item.ID" url="/pages/index/detail/detail?id={{item.ID}}">
+    <view class="collect_item">
+      <view class="collect_image">
+        <image src="{{item.urlimg}}"></image>
+      </view>
+      <view class="collect_info">
+        <view class="info_item">
+          <view class="info_name">
+            <text>{{item.brand}}{{item.name}}{{item.submodel}}</text>
+          </view>
+          <view class="info_price">
+            <text class="icon fa fa-jpy"></text>
+            <text>{{item.price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,78 @@
+<!--pages/index/detail/detail.wxml-->
+<view class="container">
+
+  <view class="detail_top">
+    <view class="swiper">
+      <swiper indicator-color="rgba(177,184,186,1)" indicator-active-color="#3D4E56" circular="true" indicator-dots="true" class="swiper_wrap">
+        <block wx:for="{{imgList}}" wx:key="item.ID">
+          <swiper-item class="swiper_item">
+            <image class="img_item" mode="aspectFit" src="{{item.photo_url}}-prolow?id={{item.ID}}" data-i="{{index}}" bindtap="showImage" bindload="imageReady">
+            </image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="top_title">
+      <button class="share" plain="true" open-type="share">
+      </button>
+      <view class="price">
+        <text class="icon fa fa-jpy"></text>{{productSelected.price}}
+      </view>
+      <view class="name">{{productSelected.brand}} {{productSelected.name}} {{productSelected.submodel}}</view>  
+    </view>
+  </view>
+  <view class="detail_body">
+    <view class="mainInfo">
+      <view class="selectBtns">
+        <view wx:for="{{products}}" wx:key="{{item.ID}}" data-index="{{index}}" class="{{index == selectIndex ? 'active selectBtn': 'selectBtn'}}" bindtap="changeSelect">
+          型号{{index + 1}}
+        </view>
+      </view>
+      <view class="selectInfo">
+        <view class="info_item">
+          <text class="title">材质：</text>{{productSelected.material}}
+        </view>
+        <view class="info_item">
+          <text class="title">尺寸：</text>{{productSelected.size}}
+        </view>
+        <view class="info_item">
+          <text class="title num_title">数量：</text>
+          <view class="num_select">
+            <text bindtap="{{selectNum == 1 ? '' : 'decrease'}}" class="{{selectNum == 1 ? 'num_btn fa fa-minus num_btn_disabled' : 'num_btn fa fa-minus'}}">
+            </text>
+            <input 
+              class="num_input" 
+              value="{{selectNum}}" 
+              type="number" maxlength="3" 
+              bindblur="checkNum" 
+              bindinput="numInput" 
+              />
+            <text bindtap="increase" class="num_btn fa fa-plus"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="detail_bottom">
+    <view class="icon_group">
+      <view class="shopcar" bindtap="{{isLogin ? 'goToShopcar' : 'showToLogin'}}">
+        <text class="shopcar_icon"></text>
+        <text class="shopcar_num" hidden="{{shopCarNum == 0}}">{{shopCarNum}}</text>
+      </view>
+      <view class="collect" bindtap="{{isLogin ? 'collected' : 'showToLogin'}}">
+        <text class="{{isCollected ? 'star' : 'star-o'}}"></text>
+      </view>
+    </view>
+
+    <view class="btn_group">
+      <view class="into_shopcar" bindtap="{{isLogin ? 'intoShopCar' : 'showToLogin'}}">
+        <text>加入购物车</text>
+      </view>
+      <view class="settlement">
+        <text>立即购买</text>
+      </view>
+    </view>
+  </view>
+</view>

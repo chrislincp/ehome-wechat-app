@@ -1,0 +1,24 @@
+<!--pages/me/myClient/myClient.wxml-->
+<view class="client_container">
+  <view class="client_search">
+    <view class="search_wrap">
+      <view class="search_icon">
+        <text class="fa fa-search"></text>
+      </view>
+      <view class="search_input">
+        <input 
+          placeholder="搜索" 
+          placeholder-class="input_class" 
+          value="{{searchValue}}"
+          bindinput="searchInput"
+          />
+      </view>
+    </view>
+  </view>
+  <scroll-view class="client_list" scroll-y>
+    <view class="client_item" wx:for="{{myClient}}" wx:key="item.ID" bindtap="call" data-tel="{{item.tel}}">
+      <text class="name">{{item.user}}</text>
+      <text class="tel">{{item.tel}}</text>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/me/setting/setting.wxml-->
+
+<view class="settingBody">
+  <view class="header">
+    <view bindtap="avatarChange" class="avatar" style="background-image: url({{avatar}})"></view>
+  </view>
+  <view class="content">
+    <view class="user">
+      <view class="user-title">
+        <text class="title">姓名</text>
+      </view>
+      <view class="user-info">
+        <view class="name-input">
+          <input bindinput="nameChange" placeholder="姓名" value="{{user.user}}" />
+        </view>
+        <view class="sex">
+          <view bindtap="maleSelect" class="male">
+            <icon size="16" color="{{user.sex == 1 ? '' : '#b1b8ba'}}" type="success" /><text class="sex-text">先生</text>
+          </view>
+          <view bindtap="femaleSelect" class="female">
+            <icon size="16" color="{{user.sex == 1 ? '#b1b8ba' : ''}}" type="success" /><text class="sex-text">女士</text>
+          </view>      
+        </view>
+       </view>     
+    </view>
+  </view>
+
+  <view class="info-submit">
+    <button bindtap="infoSubmit">提交</button>
+  </view>
+</view>

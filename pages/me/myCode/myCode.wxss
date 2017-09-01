@@ -1,0 +1,14 @@
+/* pages/me/myCode/myCode.wxss */
+page {
+  background: #3D4E56;
+}
+.myCode {
+  width: 80%;
+  height: 0;
+  padding-bottom: 80%;
+  background-color: #3D4E56;
+  margin: 100px auto;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

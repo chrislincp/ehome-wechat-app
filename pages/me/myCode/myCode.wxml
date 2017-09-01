@@ -1,0 +1,4 @@
+<!--pages/me/myCode/myCode.wxml-->
+<view class="myCodeBody">
+  <view class="myCode" style="background-image: url({{url}})"></view>
+</view>
